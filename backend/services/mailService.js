@@ -15,7 +15,15 @@ const sendEmail = async (name, email, message) => {
     })
   });
 
-  const result = await response.json();
+  const responseText = await response.text();
+  let result;
+  try {
+    result = JSON.parse(responseText);
+  } catch (e) {
+    console.error('Non-JSON Response:', responseText);
+    throw new Error(`Server returned HTML instead of JSON. Status: ${response.status}. Body: ${responseText.substring(0, 100)}...`);
+  }
+
   if (!result.success) {
     throw new Error(result.message || 'Web3Forms API Error');
   }
