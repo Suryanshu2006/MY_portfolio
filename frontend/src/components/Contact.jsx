@@ -20,7 +20,7 @@ const Contact = () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE", // User will replace this or use env
+          access_key: "c9b6732d-a46a-4b35-a848-c4a450ecc1dd", // User will replace this or use env
           ...formData,
           subject: `New Portfolio Message from ${formData.name}`,
           from_name: 'Portfolio Contact'
