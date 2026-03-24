@@ -1,30 +1,25 @@
-const nodemailer = require('nodemailer');
+const sendEmail = async (name, email, message) => {
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      access_key: process.env.WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE',
+      name: name,
+      email: email,
+      message: message,
+      subject: `New Portfolio Message from ${name}`,
+      from_name: 'Portfolio Contact'
+    })
+  });
 
-const transporter = nodemailer.createTransport({
-  host: '74.125.136.108', // smtp.gmail.com IPv4 address
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  },
-  servername: 'smtp.gmail.com' // Ensures SSL certificate still matches
-});
-
-const sendEmail = (name, email, message) => {
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: 'singhsuryanshukumar5@gmail.com', // User's email
-    subject: `New Portfolio Message from ${name}`,
-    text: `You have received a new message from your portfolio website:
-    
-Name: ${name}
-Email: ${email}
-Message: ${message}
-    `
-  };
-
-  return transporter.sendMail(mailOptions);
+  const result = await response.json();
+  if (!result.success) {
+    throw new Error(result.message || 'Web3Forms API Error');
+  }
+  return result;
 };
 
 module.exports = { sendEmail };
