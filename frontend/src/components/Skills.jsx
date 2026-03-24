@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import API_BASE_URL from '../api/config';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    fetch('/api/skills')
+    fetch(`${API_BASE_URL}/api/skills`)
       .then(res => res.json())
       .then(data => setSkills(data))
       .catch(err => console.error("Error fetching skills:", err));

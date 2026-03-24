@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar } from 'lucide-react';
+import API_BASE_URL from '../api/config';
 
 const Internships = () => {
   const [internships, setInternships] = useState([]);
 
   useEffect(() => {
-    fetch('/api/internships')
+    fetch(`${API_BASE_URL}/api/internships`)
       .then(res => res.json())
       .then(data => setInternships(data))
       .catch(err => console.error("Error fetching internships:", err));

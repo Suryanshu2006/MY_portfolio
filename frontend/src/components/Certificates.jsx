@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Calendar } from 'lucide-react';
+import API_BASE_URL from '../api/config';
 
 const Certificates = () => {
   const [certificates, setCertificates] = useState([]);
 
   useEffect(() => {
-    fetch('/api/certificates')
+    fetch(`${API_BASE_URL}/api/certificates`)
       .then(res => res.json())
       .then(data => setCertificates(data))
       .catch(err => console.error(err));
