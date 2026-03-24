@@ -15,6 +15,7 @@ build/
 
 # Backend specific
 backend/node_modules/
+
 backend/.env
 
 # Frontend specific
