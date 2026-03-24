@@ -1,14 +1,14 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  host: '74.125.136.108', // smtp.gmail.com IPv4 address
   port: 465,
   secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
   },
-  family: 4 // Force IPv4 to avoid ENETUNREACH (IPv6) issues on Render
+  servername: 'smtp.gmail.com' // Ensures SSL certificate still matches
 });
 
 const sendEmail = (name, email, message) => {
