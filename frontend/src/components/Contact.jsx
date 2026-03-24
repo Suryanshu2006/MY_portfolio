@@ -12,25 +12,32 @@ const Contact = () => {
     setStatus('Sending...');
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/contact`, {
+      // We use Web3Forms directly from the frontend to bypass Render's network blocks
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE", // User will replace this or use env
+          ...formData,
+          subject: `New Portfolio Message from ${formData.name}`,
+          from_name: 'Portfolio Contact'
+        }),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+      if (data.success) {
         setStatus('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setStatus(''), 3000);
       } else {
-        const data = await response.json();
         setStatus(data.message || 'Error sending message');
       }
     } catch (err) {
       console.error(err);
-      setStatus('Failed to connect to server');
+      setStatus('Failed to connect to mail service');
     }
   };
 
