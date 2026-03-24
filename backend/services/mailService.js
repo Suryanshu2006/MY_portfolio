@@ -3,11 +3,12 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
-  secure: true, // Use SSL
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
-  }
+  },
+  family: 4 // Force IPv4 to avoid ENETUNREACH (IPv6) issues on Render
 });
 
 const sendEmail = (name, email, message) => {
