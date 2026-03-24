@@ -3,7 +3,8 @@ const sendEmail = async (name, email, message) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      'Accept': 'application/json',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     },
     body: JSON.stringify({
       access_key: process.env.WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE',
@@ -28,6 +29,7 @@ const sendEmail = async (name, email, message) => {
     throw new Error(result.message || 'Web3Forms API Error');
   }
   return result;
+
 };
 
 module.exports = { sendEmail };
