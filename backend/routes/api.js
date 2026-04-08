@@ -64,24 +64,6 @@ router.post('/projects', async (req, res) => {
   }
 });
 
-const { sendEmail } = require('../services/mailService');
-
-// CONTACT API
-router.post('/contact', async (req, res) => {
-  const { name, email, message } = req.body;
-  try {
-    await sendEmail(name, email, message);
-    res.status(200).json({ message: 'Email sent successfully!' });
-  } catch (err) {
-    console.error('Mail Error:', err);
-    res.status(500).json({ 
-      message: 'Error sending email', 
-      details: err.message,
-      code: err.code 
-    });
-  }
-});
-
 // Get all certificates
 router.get('/certificates', async (req, res) => {
   try {

@@ -6,7 +6,9 @@ const internshipSchema = new mongoose.Schema({
   duration: { type: String, required: true },
   responsibilities: [{ type: String }],
   achievements: [{ type: String }],
-  logo: { type: String }
+  logo: { type: String },
+  offerLetter: { type: String },
+  completionCertificate: { type: String }
 });
 
 module.exports = mongoose.model('Internship', internshipSchema);
