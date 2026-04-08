@@ -61,7 +61,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative hidden lg:flex flex-col justify-center items-center"
+          className="relative flex flex-col justify-center items-center mt-12 lg:mt-0"
         >
           {/* Abstract geometric shapes to fit "futuristic" aesthetic */}
           <div className="absolute w-80 h-80 bg-gradient-to-tr from-primary to-secondary rounded-full filter blur-[100px] opacity-40 animate-pulse"></div>
