@@ -110,6 +110,14 @@ const projects = [
     liveLink: 'https://suryadocs.vercel.app/',
     image: '/projects/project7.png',
     technologies: ['React', 'Express', 'MongoDB']
+  },
+  {
+    title: 'Dhonipedia',
+    description: 'A premium fan website dedicated to MS Dhoni, capturing his legendary journey, career statistics, and iconic achievements in Indian cricket.',
+    githubLink: 'https://github.com/Suryanshu2006/Dhonipedia',
+    liveLink: 'https://dhonipedia.vercel.app/',
+    image: '/projects/project8.png',
+    technologies: ['HTML', 'CSS', 'JavaScript']
   }
 ];
 
