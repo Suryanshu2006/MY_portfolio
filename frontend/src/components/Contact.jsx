@@ -73,30 +73,30 @@ const Contact = () => {
                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
                   <Mail className="text-primary" />
                 </div>
-                <div>
-                   <p className="text-sm text-slate-400">Email Me At</p>
-                   <p className="font-semibold text-lg">singhsuryanshukumar5@gmail.com</p>
-                </div>
+                 <div>
+                    <p className="text-sm text-slate-400">Email Me At</p>
+                    <p className="font-semibold text-base sm:text-lg break-all">singhsuryanshukumar5@gmail.com</p>
+                 </div>
               </div>
 
               <div className="flex items-center text-slate-300 hover:text-white transition-colors group cursor-pointer">
                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
                   <Phone className="text-primary" />
                 </div>
-                <div>
-                   <p className="text-sm text-slate-400">Call Me At</p>
-                   <p className="font-semibold text-lg">+91 9931692339</p>
-                </div>
+                 <div>
+                    <p className="text-sm text-slate-400">Call Me At</p>
+                    <p className="font-semibold text-base sm:text-lg">+91 9931692339</p>
+                 </div>
               </div>
 
               <div className="flex items-center text-slate-300 hover:text-white transition-colors group cursor-pointer">
                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
                   <MapPin className="text-primary" />
                 </div>
-                <div>
-                   <p className="text-sm text-slate-400">Hometown</p>
-                   <p className="font-semibold text-lg">Patna, Bihar</p>
-                </div>
+                 <div>
+                    <p className="text-sm text-slate-400">Hometown</p>
+                    <p className="font-semibold text-base sm:text-lg">Patna, Bihar</p>
+                 </div>
               </div>
 
               <div className="flex items-center text-slate-300 hover:text-white transition-colors group cursor-pointer" onClick={() => window.open('https://www.linkedin.com/in/suryanshu-kumar-singh-3b3376339/', '_blank')}>
