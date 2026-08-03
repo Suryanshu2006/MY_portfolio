@@ -156,6 +156,21 @@ const certificates = [
     date: 'Dec 2024',
     description: 'Acquired skills in structuring web pages, semantic markup, and responsive design principles. Built a solid base for front-end development.',
     image: '/certificates/cert5.png'
+  },
+  {
+    title: 'Lifelong Professional Skills',
+    issuer: 'IBM Skillbuild',
+    date: 'Apr 2026',
+    description: 'Developed strong capabilities in collaboration, communication, critical thinking, adaptability, and professional ethics. Demonstrated growth mindset and readiness to thrive in dynamic academic and industry environments.',
+    image: '/certificates/cert6.png'
+  },
+  {
+    title: 'AI Tools Workshop',
+    issuer: 'be10X',
+    date: 'Aug 2026',
+    description: 'Enhanced proficiency in leveraging AI-powered tools for research, productivity, and automation. Gained hands-on experience with state-of-the-art AI applications and workflows.',
+    image: '/certificates/cert7.png'
+  
   }
 ];
 
