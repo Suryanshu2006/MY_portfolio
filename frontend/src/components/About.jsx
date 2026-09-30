@@ -26,7 +26,7 @@ const About = () => {
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full filter blur-3xl group-hover:bg-primary/30 transition-all duration-500"></div>
           <h3 className="text-2xl font-bold text-white mb-4">My Journey</h3>
           <p className="text-slate-300 mb-4 leading-relaxed relative z-10">
-            An enthusiastic 19-year-old from Patna, Bihar, currently pursuing my B. Tech in Computer Science and Engineering with a focus on Software Product Engineering by Industry Experience at Godavari Global University, Andhra Pradesh.
+            An enthusiastic 20-year-old from Patna, Bihar, currently pursuing my B. Tech in Computer Science and Engineering with a focus on Software Product Engineering by Industry Experience at Godavari Global University, Andhra Pradesh.
           </p>
           <p className="text-slate-300 leading-relaxed relative z-10">
             Passionate about programming and solving coding problems, I enjoy delving into web development using modern frameworks like React and Vite. I focus on bridging the gap between empathic UI/UX design and scalable MERN full-stack development.
@@ -41,9 +41,9 @@ const About = () => {
           className="grid grid-cols-2 gap-4"
         >
           {[
-            { title: 'Education', desc: 'B.Tech CSE (2nd Year)' },
+            { title: 'Education', desc: 'B.Tech CSE (3rd Year)' },
             { title: 'University', desc: 'Godavari Global Univ.' },
-            { title: 'Hometown', desc: 'Patna, Bihar' },
+            { title: 'Hometown', desc: 'Hajipur, Bihar' },
             { title: 'Present', desc: 'Rajahmundry, AP' },
           ].map((item, index) => (
             <div key={index} className="glass-card text-center p-6 flex flex-col justify-center items-center hover:-translate-y-2 transition-transform duration-300">
