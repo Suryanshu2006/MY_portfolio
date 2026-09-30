@@ -44,7 +44,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
-            An enthusiastic 19-year-old from Patna, Bihar. Passionate about programming, solving coding problems, and delving into web development using modern frameworks like React and Vite!
+            An enthusiastic 20-year-old from Patna, Bihar. Passionate about programming, solving coding problems, and delving into web development using modern frameworks like React and Vite!
           </p>
 
           <div className="flex flex-wrap gap-4">
